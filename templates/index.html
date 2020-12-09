@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<h2> test head </h2>
+  
+</head>
+
+<body style="background-color:powderblue;">
+    <div class = 'login'>
+        <h1> Predict Salary Analysis</h1>
+        
+        <!--- here we give main input for recieving query to our ml --->
+        
+        <form action= "{{url_for('predict')}}"method="post">
+<br>
+           <input type = "text" name="experience" placeholder="Experience" required="required" />
+           <br>
+           <br>
+           <input type = "text" name="test_score" placeholder="Test Score" required="required" />
+           <br>
+           <br>
+           <input type = "text" name="interview_score" placeholder="Interview Score" required="required" />
+           <br><br>
+           
+           <button type = 'submit' class='btn btn-primary btn-block btn-large"'>Predict</button>
+       </form> 
+        <br>
+        <br>
+            {{ prediction_text }}
+        <marquee>This is basic example of Prediction</marquee>
+    </div>
+
+</body>
+</html>
